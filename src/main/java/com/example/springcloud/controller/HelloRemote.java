@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(name= "SERVICE-A")
 public interface HelloRemote {
 
-    @RequestMapping(value = "/user",method = RequestMethod.GET)
+    @RequestMapping(value = "/hello",method = RequestMethod.GET)
     String hello();
 
     @RequestMapping(value = "/license",method = RequestMethod.GET)

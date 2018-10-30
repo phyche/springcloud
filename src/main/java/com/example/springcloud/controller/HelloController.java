@@ -21,6 +21,9 @@ public class HelloController {
     @Autowired
     private SecurityRemote securityRemote;
 
+    @Autowired
+    private StreamRemote streamRemote;
+
     @RequestMapping("/hello")
     public String hello() {
         //return restTemplate.getForEntity("http://132.126.3.55:4444/hello", String.class).getBody();
@@ -47,5 +50,20 @@ public class HelloController {
     @RequestMapping("/security")
     public String security() {
         return securityRemote.hello();
+    }
+
+    @RequestMapping("/security/user")
+    public String user() {
+        return securityRemote.user();
+    }
+
+    @RequestMapping("/stream")
+    public String stream() {
+        return streamRemote.hello();
+    }
+
+    @RequestMapping("/stream/saveOrg")
+    public String saveOrg() {
+        return streamRemote.saveOrg();
     }
 }

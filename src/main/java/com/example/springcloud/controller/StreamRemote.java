@@ -4,12 +4,12 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient(name= "SERVICE-SECURITY")
-public interface SecurityRemote {
+@FeignClient(name= "SERVICE-STREAM")
+public interface StreamRemote {
 
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     String hello();
 
-    @RequestMapping(value = "/user",method = RequestMethod.GET)
-    String user();
+    @RequestMapping(value = "/saveOrg",method = RequestMethod.GET)
+    String saveOrg();
 }

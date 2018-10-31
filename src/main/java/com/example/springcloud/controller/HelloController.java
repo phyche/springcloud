@@ -24,6 +24,9 @@ public class HelloController {
     @Autowired
     private StreamRemote streamRemote;
 
+    @Autowired
+    private RedisRemote redisRemote;
+
     @RequestMapping("/hello")
     public String hello() {
         //return restTemplate.getForEntity("http://132.126.3.55:4444/hello", String.class).getBody();
@@ -65,5 +68,25 @@ public class HelloController {
     @RequestMapping("/stream/saveOrg")
     public String saveOrg() {
         return streamRemote.saveOrg();
+    }
+
+    @RequestMapping("/redis")
+    public String redis() {
+        return redisRemote.hello();
+    }
+
+    @RequestMapping("/redis/save")
+    public String save() {
+        return redisRemote.save();
+    }
+
+    @RequestMapping("/redis/delete")
+    public String delete() {
+        return redisRemote.delete();
+    }
+
+    @RequestMapping("/redis/query")
+    public String query() {
+        return redisRemote.query();
     }
 }

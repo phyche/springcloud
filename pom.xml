@@ -43,6 +43,12 @@
 			<!--<version>2.0.0.RC1</version>-->
 		</dependency>
 
+		<!--配置zuul依赖性-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<dependencyManagement>
